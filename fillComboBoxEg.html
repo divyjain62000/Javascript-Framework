@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+<head>
+<title>AJAX Example 1</title>
+<script src='js/framework.js'></script>
+<script>
+function populateDesignations()
+{
+$$$.ajax({
+"url": "servletOne",
+"methodType": "GET",
+"success": function(responseData){
+var designations=JSON.parse(responseData);
+$$$("designationCode").fillComboBox({
+"dataSource": designations,
+"text" : "title",
+"value": "code",
+"firstOption" : {
+"text": "<select designation>",
+"value" : "-1"
+}
+});
+},
+"failure": function(){
+alert("Some problem");
+}
+});
+}
+window.addEventListener('load',populateDesignations);
+</script>
+</head>
+<body>
+<h1>Fill ComboBox Example</h1>
+<select id='designationCode'>
+</select>
+</body>
+</html>

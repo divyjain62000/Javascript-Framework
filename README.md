@@ -1,3 +1,5 @@
 # JavaScript-Framework
+It is a javaScript framework using this user can create some components as well as user can validate form and send post and get request.Using this framework user able to do his / her work in very fast and simple manner.
 
-This is JavaScript framework using this framework user can make some components,validate form and send request through get and post method.
+## Features:
+1)

@@ -15,3 +15,51 @@ It is a javaScript framework using this user can create some components as well 
 <script src='js/framework.js'></script>
 <link rel="stylesheet" href="css/framework_style.css">
 ````
+
+### Creating modal:
+code to write in between <script> tag
+````
+<script>
+// user written functions
+function abBeforeOpening()
+{
+return true;
+}
+function abOpened()
+{
+}
+function abBeforeClosing()
+{
+return true;
+}
+function abClosed()
+{
+}
+function createModal1()
+{
+$$$.modals.show("ab");
+}
+</script>
+````
+code to write in between <body> tag
+````
+<button style='background:#0047b3;border:none;border-radius:2px;padding:10px;font-size:18px;color:#FFF' onclick='createModal1()'>Show modal</button>
+<div id='ab' style='display:none' forModal='TruE' size="600x300" header="Some Heading" footer="Some Footer" maskColor="#41EAD4" modalBackgroundColor="#EEF1EF	" closeButton="true" beforeOpening="abBeforeOpening()" afterOpening="abOpened()" beforeClosing="abBeforeClosing()" afterClosing="abClosed()">
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+<input type='text' id='myTextBox' value='Great'>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+God is great<br>
+The End
+</div>
+````

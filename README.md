@@ -1,12 +1,12 @@
 # JavaScript-Framework
-It is a javaScript framework using this user can create some components as well as user can validate form and send post and get request.Using this framework user able to do his / her work in very fast and simple manner.
+It is a javaScript framework using this user can create some components as well as user can validate form and handle ajax (GET/POST) request.Using this framework user able to do his / her work in very fast and simple manner.
 
 ## Features:
 1) User can create modal in very easy way.
 2) User can create accordian pan in very simple way.
 3) User can fill combobox by writing a very little code.
 4) User able to do form validation by writing a some lines code.
-5) User able to send GET and POST request in very simple way.
+5) Handle ajax GET and POST request.
 
 ## Steps to use this framework:-
 1) Download framework.js file and framework_style.css file 
@@ -163,18 +163,10 @@ $$$.ajax({
 },
 "methodType":"GET",
 "success":function(responseData){
-if(responseData=="INVALID")
-{
-alert("Invalid designation code");
-}
-else
-{
-var splits=responseData.split(",");
-titleSpan.html(splits[1]);
-}
+// code 
 },
 "failure":function(){
-alert("some problem");
+//code
 }
 });
 }
@@ -189,4 +181,52 @@ Enter code <input type='text' id='code'>
 Title <span id='title'></span>
 <br>
 <a href='index.html'>Home</a>
+````
+
+### Sending POST type request:
+
+````
+<script>
+function saveEnquiry()
+{
+var firstName=$$$("firstName").value();
+var lastName=$$$("lastName").value();
+var age=$$$("age").value();
+var customer={
+"firstName" : firstName,
+"lastName" :  lastName,
+"age" : age
+};
+var whatever=$$$("whatever");
+whatever.html("");
+$$$.ajax({
+"methodType":"POST",
+"url":"servletThree",
+"data":customer,
+"sendJSON":true,
+"success":function(responseData){
+var customer=JSON.parse(responseData);
+var a="First Name: "+customer.firstName+"<br>";
+a=a+"Last Name: "+customer.lastName+"<br>";
+a=a+"Age: "+customer.age;
+whatever.html(a);
+},
+"failure":function(){
+alert("Some problem");
+}
+});
+}
+</script>
+````
+
+````
+<body>
+<h1>Post type request Example</h1> 
+<label>First Name </label><br><input type='text' id='firstName'><br><br>
+<label>Last Name </label><br><input type='text' id='lastName'><br><br>
+<label>Age </label><br><input type='text' id='age'><br><br>
+<button type='button' onclick='saveEnquiry()'>Save</button><br>
+<br>
+<div id='whatever'></div>
+</body>
 ````

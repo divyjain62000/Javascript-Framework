@@ -186,7 +186,8 @@ window.addEventListener('load',populateDesignations);
 ````
 
 ### Output:
-![image](https://user-images.githubusercontent.com/82946769/116789502-d5af0700-aacc-11eb-9ac1-51a22dfa3358.png)
+![image](https://user-images.githubusercontent.com/82946769/116789624-5968f380-aacd-11eb-83a4-945f85914741.png)
+
 
 
 ### Sending GET type request:

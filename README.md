@@ -44,7 +44,7 @@ $$$.modals.show("ab");
 code to write in between <body> tag
 ````
 <button style='background:#0047b3;border:none;border-radius:2px;padding:10px;font-size:18px;color:#FFF' onclick='createModal1()'>Show modal</button>
-<div id='ab' style='display:none' forModal='TruE' size="600x300" header="Some Heading" footer="Some Footer" maskColor="#41EAD4" modalBackgroundColor="#EEF1EF	" closeButton="true" beforeOpening="abBeforeOpening()" afterOpening="abOpened()" beforeClosing="abBeforeClosing()" afterClosing="abClosed()">
+<div id='ab' style='display:none' forModal='true' size="600x300" header="Some Heading" footer="Some Footer" maskColor="#41EAD4" modalBackgroundColor="#EEF1EF	" closeButton="true" beforeOpening="abBeforeOpening()" afterOpening="abOpened()" beforeClosing="abBeforeClosing()" afterClosing="abClosed()">
 God is great<br>
 God is great<br>
 God is great<br>
@@ -63,3 +63,5 @@ God is great<br>
 The End
 </div>
 ````
+ ![image](https://user-images.githubusercontent.com/82946769/116775045-319e6f00-aa7e-11eb-967b-b4c184f1aae7.png)
+

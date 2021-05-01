@@ -189,6 +189,85 @@ window.addEventListener('load',populateDesignations);
 ![image](https://user-images.githubusercontent.com/82946769/116789624-5968f380-aacd-11eb-83a4-945f85914741.png)
 
 
+### Form validation:
+````
+<script>
+// TMJRock user script starts here
+function doSomething()
+{
+return $$$("someForm").isValid({
+"nm":{
+"required":true,
+"maxLength":20,
+"errorPane":"nmErrorSection",
+"errors":{
+"required":"Name required",
+"maxLength":"Name cannot exceed 20 characters"
+}
+},
+"ad":{
+"required":true,
+"errorPane":"adErrorSection",
+"errors":{
+"required":"Address required"
+}
+},
+"ct":{
+"invalid":-1,
+"errorPane":"ctErrorSection",
+"errors":{
+"invalid":"Select city"
+}
+},
+"gender":{
+"required":true,
+"errorPane":"genderErrorSection",
+"errors":{
+"required":"select gender"
+}
+},
+"agree":{
+"requiredState":true,
+"displayAlert":true,
+"errors":{
+"requiredState":"Select I agree checkbox"
+}
+}
+});
+}
+</script>
+````
+
+````
+<body>
+<h1>Form validation example</h1>
+<form id='someForm' onsubmit='return doSomething()'>
+<label>Name</label> <br><input type='text' name='nm' id='nm'> <span id='nmErrorSection'></span><br><br>
+<label>Address</label> <br><textarea id='ad' name='ad'></textarea> <span id='adErrorSection'></span><br><br>
+<label>Select city</label><br>
+<select id='ct' name='ct'>
+<option value='-1'>select city</option>
+<option value='1'>Ujjain</option>
+<option value='2'>Dewas</option>
+<option value='3'>Indore</option>
+</select>
+ <span id='ctErrorSection'></span><br>
+<br><br>
+<label>Gender &nbsp;&nbsp;&nbsp;</label><br>
+Male <input type='radio' name='gender' id='ml' value='M'>&nbsp;&nbsp;&nbsp;
+Female <input type='radio' name='gender' id='fe' value='F'>&nbsp;&nbsp;&nbsp;
+ <span id='genderErrorSection'></span>
+<br><br>
+<input type='checkbox' name='agree' id='ag' value='y'> I agree?
+<br><br>
+<button type='submit'>Registor</button>
+</form>
+</body>
+````
+
+### Output:
+![image](https://user-images.githubusercontent.com/82946769/116789765-270bc600-aace-11eb-9b88-9711ce63eb57.png)
+
 
 ### Sending GET type request:
 

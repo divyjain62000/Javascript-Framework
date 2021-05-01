@@ -70,6 +70,7 @@ The End
  
  ### Creating accordian panel:
  code to write in between <body> tag
+ 
  ````
  <h1>Accordian Pan Example</h1>
 <div accordian="true">
@@ -146,4 +147,46 @@ The End
  ### Output
  ![image](https://user-images.githubusercontent.com/82946769/116775129-d620b100-aa7e-11eb-9005-c637be6ff0f1.png)
 
+### Sending GET type request:
 
+````
+<script>
+function getDesignation()
+{
+let titleSpan=$$$("title");
+titleSpan.html("");
+let code=$$$("code").value();
+$$$.ajax({
+"url":"servletTwo",
+"data":{
+"code":code
+},
+"methodType":"GET",
+"success":function(responseData){
+if(responseData=="INVALID")
+{
+alert("Invalid designation code");
+}
+else
+{
+var splits=responseData.split(",");
+titleSpan.html(splits[1]);
+}
+},
+"failure":function(){
+alert("some problem");
+}
+});
+}
+</script>
+````
+
+````
+<h1>GET Type request with data Example</h1>
+Enter code <input type='text' id='code'>
+<button type='button' onclick='getDesignation()'>Get Designation</button><br>
+<br>
+Title <span id='title'></span>
+<br>
+<a href='index.html'>Home</a>
+````

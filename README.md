@@ -63,7 +63,87 @@ God is great<br>
 The End
 </div>
 ````
- ### output
+ ### Output
  
  ![image](https://user-images.githubusercontent.com/82946769/116775045-319e6f00-aa7e-11eb-967b-b4c184f1aae7.png)
+ 
+ 
+ ### Creating accordian panel:
+ code to write in between <body> tag
+ ````
+ <h1>Accordian Pan Example</h1>
+<div accordian="true">
+<h3 accordianHeadrerBackgroundColor="#b97a56">Heading 1</h3>
+<div accordianBackgroundColor="#ffe3ec">
+1 whatever whatever
+2 whatever whatever
+3 whatever whatever<br>
+4 whatever whatever
+5 whatever whatever
+6 whatever whatever<br>
+7 whatever whatever
+8 whatever whatever
+9 whatever whatever<br>
+</div><br>
+<h3 accordianHeadrerBackgroundColor="#b97a56">Heading 2</h3>
+<div accordianBackgroundColor="#ffe3ec">
+11 whatever whatever
+22 whatever whatever
+33 whatever whatever
+44 whatever whatever
+55 whatever whatever
+66 whatever whatever
+77 whatever whatever
+</div><br>
+<h3 accordianHeadrerBackgroundColor="#b97a56">Heading 3</h3>
+<div accordianBackgroundColor="#ffe3ec">
+111 whatever whatever
+222 whatever whatever
+333 whatever whatever
+444 whatever whatever
+555 whatever whatever
+666 whatever whatever
+777 whatever whatever
+</div>
+</div>
+<br><br>
+
+
+<div accordian='true'>
+<h3>Heading 1000</h3>
+<div>
+1 whatever whatever
+2 whatever whatever
+3 whatever whatever
+4 whatever whatever
+5 whatever whatever
+6 whatever whatever
+7 whatever whatever
+</div><br>
+<h3>Heading 2000</h3>
+<div>
+11 whatever whatever
+22 whatever whatever
+33 whatever whatever
+44 whatever whatever
+55 whatever whatever
+66 whatever whatever
+77 whatever whatever
+</div><br>
+<h3>Heading 3000</h3>
+<div>
+111 whatever whatever
+222 whatever whatever
+333 whatever whatever
+444 whatever whatever
+555 whatever whatever
+666 whatever whatever
+777 whatever whatever
+</div><br>
+</div>
+ ````
+ 
+ ### Output
+ ![image](https://user-images.githubusercontent.com/82946769/116775129-d620b100-aa7e-11eb-9005-c637be6ff0f1.png)
+
 

@@ -147,6 +147,48 @@ The End
  ### Output
  ![image](https://user-images.githubusercontent.com/82946769/116775129-d620b100-aa7e-11eb-9005-c637be6ff0f1.png)
 
+
+### Fill combobox:
+````
+<script>
+function populateDesignations()
+{
+$$$.ajax({
+"url": "servletOne",
+"methodType": "GET",
+"success": function(responseData){
+var designations=JSON.parse(responseData);
+$$$("designationCode").fillComboBox({
+"dataSource": designations,
+"text" : "title",
+"value": "code",
+"firstOption" : {
+"text": "<select designation>",
+"value" : "-1"
+}
+});
+},
+"failure": function(){
+alert("Some problem");
+}
+});
+}
+window.addEventListener('load',populateDesignations);
+</script>
+````
+
+````
+<body>
+<h1>Fill ComboBox Example</h1>
+<select id='designationCode'>
+</select>
+</body>
+````
+
+### Output:
+![image](https://user-images.githubusercontent.com/82946769/116789502-d5af0700-aacc-11eb-9ac1-51a22dfa3358.png)
+
+
 ### Sending GET type request:
 
 ````

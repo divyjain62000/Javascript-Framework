@@ -147,7 +147,6 @@ The End
  ### Output
  ![image](https://user-images.githubusercontent.com/82946769/116775129-d620b100-aa7e-11eb-9005-c637be6ff0f1.png)
 
-
 ### Fill combobox:
 ````
 <script>

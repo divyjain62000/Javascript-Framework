@@ -3,7 +3,7 @@ It is a javaScript framework using this user can create some components as well 
 
 ## Features:
 1) User can create modal in very easy way.
-2) User can create accordian pan in very simple way.
+2) User can create accordion pan in very simple way.
 3) User can fill combobox by writing a very little code.
 4) User able to do form validation by writing a some lines code.
 5) Handle ajax GET and POST request.
